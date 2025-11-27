@@ -1,1 +1,1 @@
-module.exports = require("@repo/eslint-config/next");
+export { default } from "@repo/eslint-config/next";
