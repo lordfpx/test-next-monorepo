@@ -5,10 +5,9 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
-        <Card title="Client space">
+        <Card title="Client">
           <p>
-            This workspace is preconfigured to consume shared UI primitives from the
-            <strong> @acme/core</strong> package.
+            Ce workspace utilise <strong>Next.js</strong> et consomme la library UI dans <strong>@acme/core</strong>.
           </p>
           <p className={styles.actions}>
             <Button label="Explore components" variant="primary" />
