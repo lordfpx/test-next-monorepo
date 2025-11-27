@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "main": "base.js",
+  "type": "module",
   "files": [
     "base.js",
     "react-library.js",
