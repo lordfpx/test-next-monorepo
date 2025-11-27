@@ -1,0 +1,8 @@
+.turbo
+node_modules
+.next
+.storybook-cache
+storybook-static
+packages/core/dist
+.DS_Store
+*.log

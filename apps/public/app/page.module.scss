@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero {
+  max-width: 800px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
