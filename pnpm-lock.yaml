@@ -53,6 +53,9 @@ importers:
       '@acme/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@acme/routing':
+        specifier: workspace:*
+        version: link:../../packages/routing
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -78,6 +81,9 @@ importers:
       '@acme/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@acme/routing':
+        specifier: workspace:*
+        version: link:../../packages/routing
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -183,6 +189,18 @@ importers:
         version: 10.1.0(eslint@9.39.1)(storybook@10.1.0(@testing-library/dom@10.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.6.3)
       typescript:
         specifier: ^5.6.3
+        version: 5.6.3
+
+  packages/routing:
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@repo/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.6.3
         version: 5.6.3
 
   packages/tsconfig: {}
