@@ -15,6 +15,7 @@ const envBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const envStorybookUrl = process.env.NEXT_PUBLIC_STORYBOOK_URL;
 const envPublicUrl = process.env.NEXT_PUBLIC_PUBLIC_URL;
 const envClientUrl = process.env.NEXT_PUBLIC_CLIENT_URL;
+const isDev = process.env.NODE_ENV !== "production";
 
 const normalizeBasePath = (value?: string) => {
   if (!value) return "";
@@ -36,9 +37,13 @@ export function getRoutes(overrides: RouteOverrides = {}): Routes {
   const basePath = normalizeBasePath(overrides.basePath ?? envBasePath);
   const prefix = withBasePath(basePath);
 
-  const publicUrl = overrides.publicUrl ?? envPublicUrl ?? prefix("/");
-  const clientUrl = overrides.clientUrl ?? envClientUrl ?? prefix("/client");
-  const storybookUrl = overrides.storybookUrl ?? envStorybookUrl ?? prefix("/storybook");
+  const defaultPublicUrl = basePath || !isDev ? prefix("/") : "http://localhost:3000/";
+  const defaultClientUrl = basePath || !isDev ? prefix("/client") : "http://localhost:3001/";
+  const defaultStorybookUrl = basePath || !isDev ? prefix("/storybook") : "http://localhost:6007/";
+
+  const publicUrl = overrides.publicUrl ?? envPublicUrl ?? defaultPublicUrl;
+  const clientUrl = overrides.clientUrl ?? envClientUrl ?? defaultClientUrl;
+  const storybookUrl = overrides.storybookUrl ?? envStorybookUrl ?? defaultStorybookUrl;
 
   return {
     public: publicUrl,

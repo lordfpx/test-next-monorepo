@@ -9,16 +9,12 @@ export default function LandingPage() {
   return (
     <main className={styles.main}>
       <header className={styles.hero}>
-        <Card title="Welcome to the public site">
+        <Card title="Public">
           <p>
-            This boilerplate ships with separate workspaces for marketing and client
-            experiences, all sharing a single design system.
+            Page du workspace <strong>public</strong> utilisant <strong>Next.js</strong> et consommant la library UI dans <strong>@acme/core</strong>.
           </p>
           <div className={styles.actions}>
-            <Link className={`${styles.link} ${styles.linkSecondary}`} href={routes.public}>
-              Voir la page publique
-            </Link>
-            <Link className={styles.link} href={routes.client}>
+            <Link className={`${styles.link} ${styles.linkSecondary}`} href={routes.client}>
               Aller sur la page client
             </Link>
             <Link className={styles.link} href={routes.storybook}>

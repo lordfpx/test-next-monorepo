@@ -11,13 +11,10 @@ export default function HomePage() {
       <section className={styles.hero}>
         <Card title="Client">
           <p>
-            Ce workspace utilise <strong>Next.js</strong> et consomme la library UI dans <strong>@acme/core</strong>.
+            Page du workspace <strong>client</strong> utilisant <strong>Next.js</strong> et consommant la library UI dans <strong>@acme/core</strong>.
           </p>
           <div className={styles.actions}>
-            <Link className={`${styles.link} ${styles.linkSecondary}`} href={routes.client}>
-              Voir la page client
-            </Link>
-            <Link className={styles.link} href={routes.public}>
+            <Link className={`${styles.link} ${styles.linkSecondary}`} href={routes.public}>
               Aller sur la page publique
             </Link>
             <Link className={styles.link} href={routes.storybook}>
