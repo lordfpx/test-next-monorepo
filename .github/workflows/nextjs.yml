@@ -32,6 +32,8 @@ jobs:
       NEXT_APP_PATH: apps/public
       # Force classic Webpack in CI to avoid Turbopack port-binding issues
       NEXT_FORCE_WEBPACK: "1"
+      # GitHub Pages project site base path (update if repo name changes)
+      NEXT_PUBLIC_BASE_PATH: "/test-next-monorepo"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
