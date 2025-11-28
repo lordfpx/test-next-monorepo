@@ -14,6 +14,10 @@ const nextConfig = {
   basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
   trailingSlash: true,
+  // Expose the computed basePath to the client so routing utilities stay in sync
+  env: {
+    NEXT_PUBLIC_ROUTES_BASE_PATH: basePath || ""
+  },
   images: {
     unoptimized: true
   }
