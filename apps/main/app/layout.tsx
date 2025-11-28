@@ -3,11 +3,15 @@ import type React from "react";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  title: "Next monorepo demo",
-  description: "App unique avec une section publique et un espace client"
+  title: "Main App",
+  description: "App Next principale qui agrège les sections publique et client"
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>{children}</body>

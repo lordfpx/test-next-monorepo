@@ -7,4 +7,6 @@ packages/core/dist
 .DS_Store
 *.log
 .pnpm-store
+.pnpm-home
 .env
+out

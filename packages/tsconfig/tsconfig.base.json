@@ -15,8 +15,8 @@
     "jsx": "preserve",
     "baseUrl": "../..",
     "paths": {
-      "@acme/core": ["packages/core/src"],
-      "@acme/core/*": ["packages/core/src/*"]
+      "@repo/core": ["packages/core/src"],
+      "@repo/core/*": ["packages/core/src/*"]
     }
   },
   "include": []

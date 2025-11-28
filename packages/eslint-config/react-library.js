@@ -1,7 +1,7 @@
-const baseConfig = require("./base");
-const storybookPlugin = require("eslint-plugin-storybook");
+import baseConfig from "./base.js";
+import storybookPlugin from "eslint-plugin-storybook";
 
-module.exports = [
+export default [
   ...baseConfig,
   {
     files: ["**/*.stories.{ts,tsx,js,jsx}"],
