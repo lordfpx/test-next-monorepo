@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_APP_PATH: apps/public
+      NEXT_APP_PATH: apps/main
       # Force classic Webpack in CI to avoid Turbopack port-binding issues
       NEXT_FORCE_WEBPACK: "1"
       # GitHub Pages project site base path (update if repo name changes)
