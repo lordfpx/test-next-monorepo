@@ -1,5 +1,14 @@
 # main
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @repo/core@1.2.0
+  - @repo/client-section@1.0.2
+  - @repo/public-section@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
