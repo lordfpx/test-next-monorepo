@@ -42,6 +42,14 @@ pnpm dev
 - `packages/eslint-config` : config ESLint partagée.
 - `packages/tsconfig` : bases TypeScript partagées.
 
+## Versionning & release (Changesets)
+
+- Créer un changeset : `pnpm changeset` puis choisir les packages concernés et le bump (`patch`/`minor`/`major`). Un fichier `.changeset/*.md` est généré.
+- Prévisualiser : `pnpm changeset status` affiche les versions à venir.
+- Appliquer les versions : `pnpm changeset version` met à jour les `package.json` concernés, le lockfile et les changelogs.
+- Publier (si registry configuré) : `pnpm changeset publish` publie les packages versionnés.
+- CI release : le workflow `.github/workflows/release.yml` utilise `changesets/action@v1` pour créer une PR de release ou publier, en s’appuyant sur `NPM_TOKEN` et `GITHUB_TOKEN`. Assure-toi que `NPM_TOKEN` est bien défini dans les secrets pour publier.
+
 ## Notes
 
 - Les apps consomment Sass et les packages partagés (`@repo/core`, `@repo/public-section`, `@repo/client-section`).
