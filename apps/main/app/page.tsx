@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { getRoutes } from "@repo/routing";
 import { PublicSection } from "@repo/public-section";
 import { ClientSection } from "@repo/client-section";
+import { Button } from "@repo/core";
 import styles from "./page.module.scss";
 
 export default function MainPage() {
@@ -17,12 +17,8 @@ export default function MainPage() {
           les workspaces dédiés pour développer séparément.
         </p>
         <div className={styles.nav}>
-          <Link className={styles.navLink} href={routes.public}>
-            Ouvrir l&apos;app publique
-          </Link>
-          <Link className={styles.navLink} href={routes.client}>
-            Ouvrir l&apos;app client
-          </Link>
+          <Button href={routes.public} label="Ouvrir l'app publique" />
+          <Button href={routes.client} label="Ouvrir l'app client" variant="secondary" />
         </div>
       </header>
 

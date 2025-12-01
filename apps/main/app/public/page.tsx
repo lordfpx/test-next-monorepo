@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { getRoutes } from "@repo/routing";
 import { PublicSection } from "@repo/public-section";
+import { Button } from "@repo/core";
 import styles from "../page.module.scss";
 
 export const metadata = {
@@ -20,12 +20,8 @@ export default function PublicPage() {
           Page dédiée à la partie publique, exportée statiquement pour GitHub Pages.
         </p>
         <div className={styles.nav}>
-          <Link className={styles.navLink} href={routes.main}>
-            Retour à l&apos;accueil
-          </Link>
-          <Link className={styles.navLink} href={routes.client}>
-            Voir la section client
-          </Link>
+          <Button href={routes.main} label="Retour à l'accueil" variant="secondary" />
+          <Button href={routes.client} label="Voir la section client" variant="ghost" />
         </div>
       </header>
 

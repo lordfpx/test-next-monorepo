@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { getRoutes } from "@repo/routing";
 import { PublicSection } from "@repo/public-section";
+import { Button } from "@repo/core";
 import styles from "./page.module.scss";
 
 export default function LandingPage() {
@@ -15,12 +15,8 @@ export default function LandingPage() {
           depuis l&apos;app principale.
         </p>
         <div className={styles.nav}>
-          <Link className={styles.navLink} href={routes.main}>
-            Retour à l&apos;app principale
-          </Link>
-          <Link className={styles.navLink} href={routes.client}>
-            Ouvrir l&apos;app client
-          </Link>
+          <Button href={routes.main} label="Retour à l'app principale" variant="primary" />
+          <Button href={routes.client} label="Ouvrir l'app client" variant="ghost" />
         </div>
       </header>
 

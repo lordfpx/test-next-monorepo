@@ -15,34 +15,3 @@
   margin-top: 1rem;
   flex-wrap: wrap;
 }
-
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.65rem 1rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid #0f172a;
-  color: #0f172a;
-  background: #e2e8f0;
-  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.link:hover {
-  background: #cbd5e1;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
-
-.linkSecondary {
-  background: #0f172a;
-  color: #f8fafc;
-  border-color: #0f172a;
-}
-
-.linkSecondary:hover {
-  background: #111827;
-  color: #fff;
-}

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { getRoutes } from "@repo/routing";
 import { ClientSection } from "@repo/client-section";
+import { Button } from "@repo/core";
 import styles from "./page.module.scss";
 
 export default function ClientPage() {
@@ -13,12 +13,8 @@ export default function ClientPage() {
           Workspace client autonome. Cette page reste accessible directement et via l&apos;app principale.
         </p>
         <div className={styles.nav}>
-          <Link className={styles.navLink} href={routes.main}>
-            Retour à l&apos;app principale
-          </Link>
-          <Link className={styles.navLink} href={routes.public}>
-            Aller à l&apos;app publique
-          </Link>
+          <Button href={routes.main} label="Retour à l'app principale" variant="primary" />
+          <Button href={routes.public} label="Aller à l'app publique" variant="ghost" />
         </div>
       </header>
 

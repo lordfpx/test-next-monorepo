@@ -1,7 +1,6 @@
 import type React from "react";
-import Link from "next/link";
 import clsx from "clsx";
-import { Card } from "@repo/core";
+import { Card, Button } from "@repo/core";
 import styles from "./section.module.scss";
 
 export type SectionRoutes = {
@@ -34,12 +33,8 @@ export function PublicSection({ routes, className }: SectionProps) {
             <strong>@repo/core</strong>.
           </p>
           <div className={styles.actions}>
-            <Link className={`${styles.link} ${styles.linkSecondary}`} href={routes.client}>
-              Aller sur la page client
-            </Link>
-            <Link className={styles.link} href={routes.storybook}>
-              Ouvrir Storybook
-            </Link>
+            <Button href={routes.client} label="Aller sur la page client" variant="secondary" />
+            <Button href={routes.storybook} label="Ouvrir Storybook" variant="ghost" />
           </div>
         </Card>
       </header>
